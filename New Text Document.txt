@@ -1,0 +1,20 @@
+<?php
+// Include your database connection code here
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Retrieve and sanitize form data
+    $itemName = mysqli_real_escape_string($conn, $_POST['item_name']);
+    $itemPrice = mysqli_real_escape_string($conn, $_POST['item_price']);
+    $itemDescription = mysqli_real_escape_string($conn, $_POST['description']);
+    $itemPicture = mysqli_real_escape_string($conn, $_POST['picture']);
+
+    // Insert the item into the database
+    $insertSql = "INSERT INTO kids (Item_name, Price, Description, Picture) VALUES ('$itemName', '$itemPrice', '$itemDescription', '$itemPicture')";
+
+    if (mysqli_query($conn, $insertSql)) {
+        // Item added successfully, you can redirect or take other actions
+    } else {
+        // Error handling, item insertion failed
+    }
+}
+?>
