@@ -21,6 +21,6 @@ server ="localhost";
 username = "root";
 dbname = "shopslay";
 password="";
-Make sure u have xamp or wamp server or any that support php .import database (shopslay(2)) and images 
+Make sure u have xamp or wamp server or any that support php .import database shopslay(2).sql and images 
 images are not all available due to github storage
 but source code is good
